@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Divorce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Predict Divorce</h1>
+    <form method="post" action="/predict">
+      <div class="mt-3">
+        <label for="Atr1">1. If one of us apologizes when our discussion deteriorates, the discussion ends.</label>
+        <select class="form-select" id="Atr1" name="Atr1">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr2">2. I know we can ignore our differences, even if things get hard sometimes.</label>
+        <select class="form-select" id="Atr2" name="Atr2">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr3">3. When we need it, we can take our discussions with my spouse from the beginning and correct it.</label>
+        <select class="form-select" id="Atr3" name="Atr3">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr4">4. When I discuss with my spouse, to contact him will eventually work.</label>
+        <select class="form-select" id="Atr4" name="Atr4">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr5">5. The time I spent with my wife is special for us.</label>
+        <select class="form-select" id="Atr5" name="Atr5">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr6">6. We don't have time at home as partners.</label>
+        <select class="form-select" id="Atr6" name="Atr6">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr7">7. We are like two strangers who share the same environment at home rather than family.</label>
+        <select class="form-select" id="Atr7" name="Atr7">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr8">8. I enjoy our holidays with my wife.</label>
+        <select class="form-select" id="Atr8" name="Atr8">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr9">9. I enjoy traveling with my wife.</label>
+        <select class="form-select" id="Atr9" name="Atr9">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr10">10. Most of our goals are common to my spouse.</label>
+        <select class="form-select" id="Atr10" name="Atr10">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr11">11. I think that one day in the future, when I look back, I see that my spouse and I have been in harmony with each other.</label>
+        <select class="form-select" id="Atr11" name="Atr11">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr12">12. My spouse and I have similar values in terms of personal freedom.</label>
+        <select class="form-select" id="Atr12" name="Atr12">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr13">13. My spouse and I have similar sense of entertainment.</label>
+        <select class="form-select" id="Atr13" name="Atr13">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr14">14. Most of our goals for people (children, friends, etc.) are the same.</label>
+        <select class="form-select" id="Atr14" name="Atr14">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr15">15. Our dreams with my spouse are similar and harmonious.</label>
+        <select class="form-select" id="Atr15" name="Atr15">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr16">16. We're compatible with my spouse about what love should be.</label>
+        <select class="form-select" id="Atr16" name="Atr16">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr17">17. We share the same views about being happy in our life with my spouse</label>
+        <select class="form-select" id="Atr17" name="Atr17">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr18">18. My spouse and I have similar ideas about how marriage should be</label>
+        <select class="form-select" id="Atr18" name="Atr18">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr19">19. My spouse and I have similar ideas about how roles should be in marriage</label>
+        <select class="form-select" id="Atr19" name="Atr19">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr20">20. My spouse and I have similar values in trust.</label>
+        <select class="form-select" id="Atr20" name="Atr20">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr21">21. I know exactly what my wife likes.</label>
+        <select class="form-select" id="Atr21" name="Atr21">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr22">22. I know how my spouse wants to be taken care of when she/he sick.</label>
+        <select class="form-select" id="Atr22" name="Atr22">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr23">23. I know my spouse's favorite food.</label>
+        <select class="form-select" id="Atr23" name="Atr23">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr24">24. I can tell you what kind of stress my spouse is facing in her/his life.</label>
+        <select class="form-select" id="Atr24" name="Atr24">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr25">25. I have knowledge of my spouse's inner world.</label>
+        <select class="form-select" id="Atr25" name="Atr25">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr26">26. I know my spouse's basic anxieties.</label>
+        <select class="form-select" id="Atr26" name="Atr26">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr27">27. I know what my spouse's current sources of stress are.</label>
+        <select class="form-select" id="Atr27" name="Atr27">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr28">28. I know my spouse's hopes and wishes.</label>
+        <select class="form-select" id="Atr28" name="Atr28">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr29">29. I know my spouse very well.</label>
+        <select class="form-select" id="Atr29" name="Atr29">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr30">30. I know my spouse's friends and their social relationships.</label>
+        <select class="form-select" id="Atr30" name="Atr30">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr31">31. I feel aggressive when I argue with my spouse.</label>
+        <select class="form-select" id="Atr31" name="Atr31">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr32">32. When discussing with my spouse, I usually use expressions such as ‘you always’ or ‘you never’ .</label>
+        <select class="form-select" id="Atr32" name="Atr32">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr33">33. I can use negative statements about my spouse's personality during our discussions.</label>
+        <select class="form-select" id="Atr33" name="Atr33">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr34">34. I can use offensive expressions during our discussions.</label>
+        <select class="form-select" id="Atr34" name="Atr34">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr35">35. I can insult my spouse during our discussions.</label>
+        <select class="form-select" id="Atr35" name="Atr35">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr36">36. I can be humiliating when we discussions.</label>
+        <select class="form-select" id="Atr36" name="Atr36">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr37">37. My discussion with my spouse is not calm.</label>
+        <select class="form-select" id="Atr37" name="Atr37">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr38">38. I hate my spouse's way of open a subject.</label>
+        <select class="form-select" id="Atr38" name="Atr38">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr39">39. Our discussions often occur suddenly.</label>
+        <select class="form-select" id="Atr39" name="Atr39">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr40">40. We're just starting a discussion before I know what's going on.</label>
+        <select class="form-select" id="Atr40" name="Atr40">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr41">41. When I talk to my spouse about something, my calm suddenly breaks.</label>
+        <select class="form-select" id="Atr41" name="Atr41">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr42">42. When I argue with my spouse, ı only go out and I don't say a word.</label>
+        <select class="form-select" id="Atr42" name="Atr42">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr43">43. I mostly stay silent to calm the environment a little bit.</label>
+        <select class="form-select" id="Atr43" name="Atr43">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr44">44. Sometimes I think it's good for me to leave home for a while.</label>
+        <select class="form-select" id="Atr44" name="Atr44">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr45">45. I'd rather stay silent than discuss with my spouse.</label>
+        <select class="form-select" id="Atr45" name="Atr45">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr46">46. Even if I'm right in the discussion, I stay silent to hurt my spouse.</label>
+        <select class="form-select" id="Atr46" name="Atr46">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr47">47. When I discuss with my spouse, I stay silent because I am afraid of not being able to control my anger.</label>
+        <select class="form-select" id="Atr47" name="Atr47">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr48">48. I feel right in our discussions.</label>
+        <select class="form-select" id="Atr48" name="Atr48">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr49">49. I have nothing to do with what I've been accused of.</label>
+        <select class="form-select" id="Atr49" name="Atr49">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr50">50. I'm not actually the one who's guilty about what I'm accused of.</label>
+        <select class="form-select" id="Atr50" name="Atr50">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr51">51. I'm not the one who's wrong about problems at home.</label>
+        <select class="form-select" id="Atr51" name="Atr51">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr52">52. I wouldn't hesitate to tell my spouse about her/his inadequacy.</label>
+        <select class="form-select" id="Atr52" name="Atr52">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr53">53. When I discuss, I remind my spouse of her/his inadequacy.</label>
+        <select class="form-select" id="Atr53" name="Atr53">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="Atr54">54. I'm not afraid to tell my spouse about her/his incompetence.</label>
+        <select class="form-select" id="Atr54" name="Atr54">
+          <option selected value="0">Never</option>
+          <option value="1">Seldom</option>
+          <option value="2">Average</option>
+          <option value="3">Frequently</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary mb-4 mt-4 w-100">Predict</button>
+    </form>
+  </div>
+</body>
+
+</html>
