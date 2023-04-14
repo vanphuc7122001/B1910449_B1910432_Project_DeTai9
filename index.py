@@ -16,6 +16,7 @@ def index():
 def predict():
     # Process data from form client 
     data = pd.DataFrame(request.form, index=[0])
+
     data = data.astype(int)
 
     # Load model saved at file model.py
